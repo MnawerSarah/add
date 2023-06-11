@@ -1,0 +1,369 @@
+/* general start */
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.inline{
+    display: inline-flex;
+}
+.topnav {
+    padding: 0 5% 0 15%;
+    overflow: hidden;
+    width: 80%;
+    height: 70px;
+    background-color: #000000;
+    color: white;
+}
+#logo {
+    font-weight: 700;
+    font-size: 24px;
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: rgb(176, 176, 176);
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+  /* header end*/
+a{
+    text-decoration: none;
+    color: white;
+    font-size: xx-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+/* index style start  */
+.main{
+    display: inline-flex;
+    text-align: center;
+    margin: 8% 4.1%;
+}
+.card{
+    text-align: center;
+    padding: 8% 5%;
+    border: 1px solid rgb(65, 57, 41);
+    border-radius: 8%;
+}
+.card:hover{
+    scale: 1.1;
+}
+.color-1{
+    background-image: linear-gradient(to right, rgb(65, 57, 41) , rgb(47, 0, 255));
+}
+.color-2{
+    background-image: linear-gradient(to right, rgb(65, 57, 41) , rgb(205, 46, 189));
+}
+.color-3{
+    background-image: linear-gradient(to right, rgb(65, 57, 41) , rgb(106, 4, 86));
+}
+ /* index style end  */
+ /* make it responsive  */
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+/* make it responsive end  */
+/* style customer start  */
+.hole-div{
+    background-color: whitesmoke;
+}
+.modern-form {
+   width: 65%;
+   margin: 3% 15% 3% 20%;
+   padding: 40px 3%;
+   color: rgb(92, 91, 88);
+}
+.modern-form div{
+    background-color: #2d2c2c;
+    background-image: linear-gradient(to right, white,#2d2c2c);
+    border: none;
+    outline: none;
+    position: relative;
+    margin: 0 0 40px 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.modern-form div input{
+    border: none;
+    outline: none;
+    padding: 5px 5px 8px 0px;
+    width: 100%;
+    font-size: 18px;
+    border-bottom: solid 1px #efefef;
+    caret-color: darkgoldenrod;
+    padding: 10px 10px 5px 30px;
+    max-width: 70%;
+    border-bottom: solid 1px white;
+    cursor: pointer;
+}
+.modern-form div label{
+    opacity: 0.8;
+    position: absolute;
+    top: -20px;
+    left: 0px;
+    transition: all 0.2s ease;
+    font-size: 18px;
+}
+.modern-form div input:hover {
+    border-bottom: solid 1px orange;
+}
+.modern-form h2 {
+    margin-top: -11%;
+    padding: 0% 0 2% 0;
+    text-align: center;
+    color: #2d2c2c;
+    font-size: 40px;
+}
+textarea{
+    width: 100%;
+    height: 150px;
+    outline: none;
+    border: none;
+    caret-color: darkgoldenrod;
+    font-size: 18px;
+    font-weight: 350;
+    color: rgb(135, 92, 4);
+}
+/* style customer end */
+
+/* login pages start  */
+.login-card{
+    margin: 3% 0 3% 50%;
+    color: white;
+}
+#bg-manager-login{
+    background-image: url("../images/p1.png");
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+}
+#bg-employee-login{
+    background-image: url("../images/p2.png");
+    background-color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+}
+.login-card input{
+    margin: 15%;
+    width: 60%;
+    outline: none;
+    border: none;
+    border-radius: 1%;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform: 0.6s;
+}
+.login-card input:hover {
+    scale: 1.1;
+    padding: 8px;
+    transform: 0.4s;
+    font-size: 18px;
+}
+.login-card label{
+    font-size: 27px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.login-card input{
+    margin: 15%;
+    width: 60%;
+    outline: none;
+    border: none;
+    border-radius: 1%;
+    font-size: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transform: 0.6s;
+}
+.login-card1 input:hover {
+    scale: 1.1;
+    padding: 8px;
+    transform: 0.4s;
+    font-size: 18px;
+}
+.login-card label{
+    font-size: 27px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.container{
+    background-color: rgb(36, 34, 32);
+    width: 150%;
+    padding: 10%;
+    border-radius: 4% 0% 0 4%;
+}
+.container:hover{
+    border-right: whitesmoke solid 4px;
+    border-top: whitesmoke solid 2px;
+    transform: 0.4s;
+}
+.container1{
+    background-color: rgb(36, 34, 32);
+    width: 120%;
+    padding: 5%;
+    border-radius: 4% 0% 0 4%;
+}
+.container1:hover{
+    border-right: whitesmoke solid 4px;
+    border-top: whitesmoke solid 2px;
+    transform: 0.4s;
+}
+/* login style end  */
+/* manager style start  */
+.manage-table{
+    max-width: 80%;
+    margin: auto;
+    padding-top: 2%;
+    padding-bottom: 2%; 
+}
+.manage-table th{
+    border-bottom: 2px black solid;
+}
+.manage-table td{
+    font-weight: 400;
+    padding: 18px;
+    border-bottom: #8d8d8d 3px solid;
+    font-size: small;
+}
+/* manager style end  */
+/* footer style start  */
+footer{
+    padding: 2%;
+    margin-top: 0;
+    background-color: #000000;
+    font-size: 15px rgb(255, 255, 255);
+    margin-top: 10px;
+    margin:2% 0% 0% 0%;
+    color: #ffffff;
+}
+.footer textarea{
+    background-color: #2d2c2c;
+    height: 110px;
+}
+.footer{
+    display: inline-flex;
+    padding: 0 10%;
+    width: 80%;
+    align-items: center center;
+}
+.footer ul{
+    width: 100%;
+    display: block;
+    padding: 0 7%;
+}
+.footer li{
+    padding: 10px 20px;
+    margin: 0 5%;
+}
+.footer li:hover{
+    color: rgb(70, 87, 112);
+}
+/* footer style end */
+/* button styles start */
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 2% 0%;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  .button2 {background-color: #008CBA;} /* Blue */
+  .button3 {background-color: #f44336;} /* Red */ 
+  .button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+  .button5 {background-color: #555555;} /* Black */
+  /* button style end  */
+  /* employee style start  */
+.bg-employee{
+    background-color: rgb(255, 255, 255);
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 350px;
+}
+.employee-card{
+    margin:5% auto; 
+    border:solid 2px black; 
+    border-radius:5%; 
+    max-width: 35%;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+.employee-card label{
+    color: #008CBA;
+    
+}
+/*employee style end*/
+/* update style start  */
+.update-style{
+    height: 600px;
+    max-width: 80%;
+    margin: auto;
+}
+.update-style form input{
+    margin: 50px 20% 0 10%;
+}
+.update-style select{
+    margin-top: 60px;
+    padding: 15px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: #008CBA;
+    font-size: xx-large;
+}
+.update-style table{
+    margin: 20px auto;
+}
+.update-style table th{
+    padding: 10px 60px;  
+    border-bottom: #000000 solid 2px;  
+}
+.update-style table td{
+    padding: 10px 60px;  
+    border-bottom: #8d8d8d solid 2px;  
+}
+/* end of update style  */

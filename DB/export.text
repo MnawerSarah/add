@@ -1,0 +1,157 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.0
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Sep 20, 2022 at 12:55 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.0.19
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `sbtec`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `employee`
+--
+
+CREATE TABLE `employee` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email_employee` varchar(255) NOT NULL,
+  `password_employee` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `employee`
+--
+
+INSERT INTO `employee` (`id`, `name`, `email_employee`, `password_employee`) VALUES
+(1, 'mise', 'mise@gmail.com', '123'),
+(2, 'sara', 'sara@gmail.com', 'sara'),
+(3, 'ali', 'ali@gmail.com', '123'),
+(4, 'v', 'v@gmail.com', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `manager`
+--
+
+CREATE TABLE `manager` (
+  `id` int(10) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `manager`
+--
+
+INSERT INTO `manager` (`id`, `name`, `email`, `password`) VALUES
+(1, 'manager', 'manager@gmail.com', '123');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ticket`
+--
+
+CREATE TABLE `ticket` (
+  `id` int(10) NOT NULL,
+  `state` varchar(255) NOT NULL,
+  `assign_to` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `product_category` varchar(255) NOT NULL,
+  `purchased_date` date NOT NULL,
+  `product_serial_number` varchar(255) NOT NULL,
+  `problem_description` varchar(255) NOT NULL,
+  `ticket_issue_date` date NOT NULL,
+  `employee_name` int(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `ticket`
+--
+
+INSERT INTO `ticket` (`id`, `state`, `assign_to`, `name`, `phone`, `email`, `product_category`, `purchased_date`, `product_serial_number`, `problem_description`, `ticket_issue_date`, `employee_name`) VALUES
+(3, 'in progress', 'employee', 'test', '1234567890', 'test@gmail.com', 'test', '2022-01-01', '101010101111', 'test', '2022-09-16', 1),
+(7, 'in progress', 'employee', 'test', '6498446818', 'test', 'test', '2020-01-01', 'test', 'test', '2022-09-08', 3),
+(8, 'in progress', 'employee', 'sara', '0123456789', 'sara@gmail.com', 'test', '2022-09-04', '111111111', 'kmajishd', '2022-09-09', 1),
+(9, 'in progress', 'employee', 'sara', '0123456789', 'sara@gmail.com', 'elect', '2022-09-01', '11111111111', ' did not work', '2022-09-29', 3),
+(10, 'unassigned', 'employee', '', '', '', '', '0000-00-00', '', ' ', '0000-00-00', NULL),
+(11, 'unassigned', 'employee', 'soccer', '+962786302178', 'admin@gmail.com', 'asdsadas', '2022-09-16', '4444444444444444444444', ' alknsjbvugdyfsa', '2022-09-21', NULL),
+(12, 'in progress', 'employee', '', '', '', '', '0000-00-00', '', ' ', '0000-00-00', 1),
+(13, 'unassigned', 'employee', '', '', '', '', '0000-00-00', '', ' ', '0000-00-00', NULL),
+(14, 'unassigned', 'employee', 'sara', '0123456789', 'sara@gmail.com', '', '0000-00-00', '', ' ', '0000-00-00', NULL),
+(15, 'unassigned', 'employee', 'hasan', '870977675', 'h@gmail.com', '9786875', '0000-00-00', '10098E', ' dkkkdukyilo', '2022-09-29', NULL),
+(16, 'in progress', 'employee', 'baa', '080758946', 'baa@gmail.com', '3pouio', '2022-09-21', '100', ' ewooirh', '2022-09-29', 3);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `employee`
+--
+ALTER TABLE `employee`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `manager`
+--
+ALTER TABLE `manager`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `ticket`
+--
+ALTER TABLE `ticket`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `employee_name` (`employee_name`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `manager`
+--
+ALTER TABLE `manager`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `ticket`
+--
+ALTER TABLE `ticket`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `ticket`
+--
+ALTER TABLE `ticket`
+  ADD CONSTRAINT `ticket_ibfk_1` FOREIGN KEY (`employee_name`) REFERENCES `employee` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
